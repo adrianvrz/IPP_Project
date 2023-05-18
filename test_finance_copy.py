@@ -1,20 +1,20 @@
 from finance import Bank
-
+from colorama import Fore, Style
 def main():
     bank = Bank()
 
     while True:
-        print("\nMenú:")
-        print("1. Crear cuenta")
+        print(Fore.GREEN + "\nMenú:" + Style.RESET_ALL)
+        print(Fore.CYAN + "1. Crear cuenta")
         print("2. Buscar cuenta por nombre")
         print("3. Agregar transacción")
         print("4. Obtener saldo de una cuenta")
         print("5. Obtener saldo total de todas las cuentas")
-        print("0. Salir")
+        print(Fore.RED + "0. Salir" + Style.RESET_ALL)
 
 
         try:
-            option = int(input("\nIngrese el número de la opción que desea ejecutar: "))
+            option = int(input(Fore.YELLOW + "\nIngrese el número de la opción que desea ejecutar: " + Style.RESET_ALL))
         except ValueError:
             print("\nPor favor, ingrese un número válido.")
             continue
